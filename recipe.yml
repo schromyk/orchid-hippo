@@ -41,6 +41,33 @@ stages:
       - gh:vanilla-os/dev-image:main:modules/00-basics.yml # Sample GitHub remote module in the format: `gh:your-name/your-repo:branch:modules/file.yml`
       - https://raw.githubusercontent.com/Vanilla-OS/dev-image/main/modules/05-go.yml # Sample full URL remote module
 
+  - name: vm-tools
+    type: apt
+    source:
+      packages:
+      - open-vm-tools 
+      - open-vm-tools-desktop
+
+  - name: virtualbox-guest-additions
+    type: apt
+    source:
+      packages:
+      - virtualbox-guest-utils
+      - virtualbox-guest-x11
+
+  - name: qemu
+    type: apt
+    source:
+      packages:
+      - qemu-guest-agent
+
+  - name: spice
+    type: apt
+    source:
+      packages:
+      - spice-vdagent
+      - spice-webdavd
+
   # Put your custom actions before this comment
 
   - name: set-image-name-abroot
