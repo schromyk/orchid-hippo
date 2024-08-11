@@ -1,0 +1,5 @@
+name: install-surfshark
+type: shell
+commands:
+  - bash /surfshark/install-surfshark.sh
+  - rm -rf /surfshark
