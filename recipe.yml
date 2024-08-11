@@ -31,7 +31,7 @@ stages:
   - name: surfshark-config
     type: includes
     includes:
-      - modules/50-install-surfshark
+      - modules/50-install-surfshark.yml
 
   - name: vm-tools
     type: apt
