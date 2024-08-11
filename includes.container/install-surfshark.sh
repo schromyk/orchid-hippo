@@ -49,4 +49,3 @@ echo "deb https://ocean.surfshark.com/debian stretch main" | tee /etc/apt/source
 wget https://www.pcloud.com/how-to-install-pcloud-drive-linux.html?download=electron-64 -O pcloud
 mv pcloud /usr/bin
 chmod +x /usr/bin/pcloud
-/usr/bin/pcloud
