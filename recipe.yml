@@ -15,6 +15,11 @@ stages:
       - echo 'APT::Install-Recommends "1";' > /etc/apt/apt.conf.d/01norecommends
 
   modules:
+  - name: surfshark-config
+    type: includes
+    includes:
+      - modules/50-install-surfshark.yml
+  
   - name: init-setup
     type: shell
     commands:
@@ -28,10 +33,11 @@ stages:
   #  includes:
   #    - modules/50-install-debs.yml # Sample local module present in this repository
 
-  - name: surfshark-config
-    type: includes
-    includes:
-      - modules/50-install-surfshark.yml
+  - name: surfshark
+    type: apt
+    source:
+      packages:
+      - surfshark
 
   - name: vm-tools
     type: apt
