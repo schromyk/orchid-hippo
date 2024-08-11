@@ -38,6 +38,8 @@ stages:
     source:
       packages:
       - surfshark
+      - libfuse2
+      - fuse3
 
   - name: vm-tools
     type: apt
