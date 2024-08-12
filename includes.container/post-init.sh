@@ -1,9 +1,8 @@
 #!/bin/bash
 
 # startup file
-mv a-startup /etc/init.d/
-chmod ugo+x /etc/init.d/a-startup
-echo "@reboot admin /etc/init.d/a-startup" | tee /etc/cron.d/a-startup
+mv rc.local /etc/
+chmod 755 /etc/rc.local
 
 # surfshark
 ln -sf /.system/opt/Surfshark/surfshark /usr/bin/surfshark
