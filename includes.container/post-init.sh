@@ -7,3 +7,5 @@ chmod +x /etc/init.d/astartup.sh
 # pcloud
 mv pcloud /opt
 chmod +x /opt/pcloud
+
+ln -sf /opt/pcloud /usr/bin/pcloud
