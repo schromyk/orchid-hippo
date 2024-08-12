@@ -11,4 +11,3 @@ mv pcloud /opt
 chmod +x /opt/pcloud
 
 ln -s /.system/opt/pcloud /usr/bin/pcloud
-mv pcloud.desktop /usr/share/applications/
