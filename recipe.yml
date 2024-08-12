@@ -1,46 +1,29 @@
-name: Hippo Vanilla Desktop # Replace this name with your image name
-id: orchid-hippo # Replace this ID with your image ID
+name: Hippo Vanilla Desktop
+id: orchid-hippo
 stages:
 - id: build
-  base: ghcr.io/vanilla-os/desktop:main # Optionally, Replace this image URL with a different one i.e. nvidia:main, etc
+  base: ghcr.io/vanilla-os/desktop:main
   singlelayer: false
   labels:
-    maintainer: self-maintained # Optionally, Replace this with your name
+    maintainer: self-maintained
   args:
-    DEBIAN_FRONTEND: noninteractive # Set the image environment as non-interactive
-  
-  # Commands to run first before building the modules
+    DEBIAN_FRONTEND: noninteractive
+
   runs:
     commands:
       - echo 'APT::Install-Recommends "1";' > /etc/apt/apt.conf.d/01norecommends
 
   modules:
-  - name: surfshark-config
+  - name: pre-config
     type: includes
     includes:
-      - modules/50-install-surfshark.yml
+      - modules/50-pre-init.yml
   
   - name: init-setup
     type: shell
     commands:
     - lpkg --unlock
     - apt-get update
-
-  # Put your custom actions behind this comment
-
-  #- name: example-modules # Sample module demonstrating importing local and remote modules
-  #  type: includes
-  #  includes:
-  #    - modules/50-install-debs.yml # Sample local module present in this repository
-
-  - name: surfshark
-    type: apt
-    source:
-      packages:
-      - surfshark
-      - libfuse2
-      - fuse3
-      - libasound2
 
   - name: vm-tools
     type: apt
@@ -69,13 +52,27 @@ stages:
       - spice-vdagent
       - spice-webdavd
 
-  - name: gnome-tweaks
+  - name: libs
     type: apt
     source:
       packages:
-      - gnome-tweaks
+        - fuse3
+        - libfuse2
+
+  # Put your custom actions behind this comment
+
+  - name: surfshark
+    type: apt
+    source:
+      packages:
+        - surfshark
 
   # Put your custom actions before this comment
+
+  - name: post-config
+    type: includes
+    includes:
+      - modules/50-post-init.yml
 
   - name: set-image-name-abroot
     type: includes

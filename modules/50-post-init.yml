@@ -1,0 +1,5 @@
+name: post-init-script
+type: shell
+commands:
+  - bash /post-init.sh
+  - rm -rf /*

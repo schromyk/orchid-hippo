@@ -1,0 +1,4 @@
+name: pre-init-script
+type: shell
+commands:
+  - bash /pre-init.sh
