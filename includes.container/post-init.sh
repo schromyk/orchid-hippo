@@ -2,11 +2,14 @@
 
 # startup file
 mv a-startup /etc/init.d/
-chmod +x /etc/init.d/a-startup
-update-rc.d a-startup defaults
+chmod ugo+x /etc/init.d/a-startup
+echo "@reboot admin /etc/init.d/a-startup" | tee /etc/cron.d/a-startup
+
+# surfshark
+ln -sf /.system/opt/Surfshark/surfshark /usr/bin/surfshark
 
 # pcloud
 mv pcloud /opt
 chmod +x /opt/pcloud
 
-ln -sf /opt/pcloud /usr/bin/pcloud
+ln -sf /.system/opt/pcloud /usr/bin/pcloud
