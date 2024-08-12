@@ -67,6 +67,12 @@ stages:
       packages:
         - surfshark
 
+  - name: firefox-devedition
+    type: apt
+    source:
+      packages:
+        - firefox-devedition
+
   # Put your custom actions before this comment
 
   - name: post-config
