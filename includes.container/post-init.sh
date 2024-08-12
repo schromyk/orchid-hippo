@@ -2,6 +2,7 @@
 
 # surfshark
 ln -sf /.system/opt/Surfshark/surfshark /usr/bin/surfshark
+ln -sf /.system/opt/Surfshark /opt/Surfshark
 
 # pcloud
 mv pcloud /opt
