@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # startup file
-mv astartup.sh /etc/init.d/
-chmod +x /etc/init.d/astartup.sh
+mv a-startup /etc/init.d/
+chmod +x /etc/init.d/a-startup
+update-rc.d a-startup defaults
 
 # pcloud
 mv pcloud /opt
