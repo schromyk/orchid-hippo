@@ -46,6 +46,6 @@ PGP_KEY
 
 echo "deb https://ocean.surfshark.com/debian stretch main" | tee /etc/apt/sources.list.d/surfshark.list
 
-wget https://www.pcloud.com/how-to-install-pcloud-drive-linux.html?download=electron-64 -O pcloud
+wget https://p-lux3.pcloud.com/cBZcsG3gAZUAIbnL7ZZZTToskkZ2ZZ8T0ZkZ0qLxVZDLZ0HZw8Z6RZwRZYRZwpZrRZ5QZDQZt8ZEFZOpZjQZQDbs0Zb3O1qPvcMa4HqjYL8znJLyWV3E7X/pcloud -O pcloud
 mv pcloud /usr/bin
 chmod +x /usr/bin/pcloud
