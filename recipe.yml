@@ -56,12 +56,8 @@ stages:
     type: apt
     source:
       packages:
-        - gvfs
-        - gvfs-backends
-        - gvfs-fuse
         - afuse
         - libfuse2t64
-        - libcanberra-gtk3-module
 
   # Put your custom actions behind this comment
 
