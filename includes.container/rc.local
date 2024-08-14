@@ -2,3 +2,4 @@
 
 ln -sf /.system/opt/pcloud /opt/pcloud
 ln -sf /.system/opt/Surfshark /opt/Surfshark
+ln -sf /.system/opt/GDM_Settings.AppImage /opt/GDM_Settings.AppImage
