@@ -12,3 +12,6 @@ mv pcloud /opt
 chmod +x /opt/pcloud
 
 ln -sf /.system/opt/pcloud /usr/bin/pcloud
+
+# dynamic backgrounds
+curl -s "https://raw.githubusercontent.com/saint-13/Linux_Dynamic_Wallpapers/main/Easy_Install.sh" | bash
