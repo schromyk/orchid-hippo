@@ -14,11 +14,11 @@ chmod +x /opt/pcloud
 ln -sf /.system/opt/pcloud /usr/bin/pcloud
 
 # gdm settings
-apt-get install -y git meson libglib2.0-dev python-gi-dev libxkbcommon-dev
+apt-get install -y git meson libglib2.0-dev python-gi-dev libxkbcommon-dev libcairo2-dev python3-cairo-dev
 git clone --depth=1 https://github.com/gdm-settings/gdm-settings
 cd gdm-settings
 meson setup build
 meson install -C build
 cd ..
 rm -r gdm-settings
-apt-get remove -y git meson libglib2.0-dev python-gi-dev libxkbcommon-dev
+apt-get remove -y git meson libglib2.0-dev python-gi-dev libxkbcommon-dev libcairo2-dev python3-cairo-dev
