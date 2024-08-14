@@ -8,8 +8,7 @@ chmod 755 /etc/rc.local
 ln -sf /.system/opt/Surfshark/surfshark /usr/bin/surfshark
 
 # pcloud
-#mv pcloud /opt
-#chmod +x /opt/pcloud
+mv pcloud /opt
+chmod +x /opt/pcloud
 
-#ln -sf /.system/opt/pcloud /usr/bin/pcloud
-rm pcloud
+ln -sf /.system/opt/pcloud /usr/bin/pcloud
