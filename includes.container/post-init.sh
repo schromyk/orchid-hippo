@@ -14,4 +14,18 @@ chmod +x /opt/pcloud
 ln -sf /.system/opt/pcloud /usr/bin/pcloud
 
 # dynamic backgrounds
-curl -s "https://raw.githubusercontent.com/saint-13/Linux_Dynamic_Wallpapers/main/Easy_Install.sh" | bash
+apt-get install -y git
+git clone https://github.com/saint-13/Linux_Dynamic_Wallpapers.git  
+cd Linux_Dynamic_Wallpapers
+
+if [[ -d /usr/share/backgrounds/Dynamic_Wallpapers ]]
+then 
+	rm -r /usr/share/backgrounds/Dynamic_Wallpapers
+fi
+
+cp -r ./Dynamic_Wallpapers/ /usr/share/backgrounds/
+cp ./xml/* /usr/share/gnome-background-properties/
+
+cd ..
+rm -r Linux_Dynamic_Wallpapers
+apt-get remove -y git
