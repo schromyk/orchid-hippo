@@ -56,8 +56,10 @@ stages:
     type: apt
     source:
       packages:
+        - afuse
+        - fuse-overlayfs
         - fuse3
-        - libfuse2
+        - libfuse3-3
 
   # Put your custom actions behind this comment
 
