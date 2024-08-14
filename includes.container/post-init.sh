@@ -13,5 +13,11 @@ chmod +x /opt/pcloud
 
 ln -sf /.system/opt/pcloud /usr/bin/pcloud
 
-# gdm theme
-mv gnome-shell-theme.gresource.default /usr/share/gnome-shell
+# gdm settings
+apt-get install -y git
+git clone --depth=1 https://github.com/gdm-settings/gdm-settings
+cd gdm-settings
+meson setup build
+meson install -C build
+cd ..
+apt-get remove -y git
