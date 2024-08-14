@@ -21,4 +21,4 @@ meson setup build
 meson install -C build
 cd ..
 rm -r gdm-settings
-apt-get remove -y git meson gobject-introspection libadwaita-1-dev libglib2.0-dev python-gi-dev gettext
+apt-get remove -y git meson gobject-introspection
