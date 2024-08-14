@@ -58,7 +58,7 @@ stages:
       packages:
         - gvfs
         - gvfs-backends
-        . gvfs-fuse
+        - gvfs-fuse
         - afuse
         - libfuse2t64
         - libcanberra-gtk3-module
