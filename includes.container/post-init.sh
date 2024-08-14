@@ -17,7 +17,7 @@ ln -sf /.system/opt/pcloud /usr/bin/pcloud
 apt-get install -y git systemd-container dbus-x11 zip unzip
 git clone https://github.com/PRATAP-KUMAR/gdm-extension/
 cd gdm-extension
-sudo make install
+make install
 cd ..
 rm -r gdm-extension
 apt-get remove -y git
