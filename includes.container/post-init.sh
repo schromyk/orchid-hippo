@@ -14,11 +14,10 @@ chmod +x /opt/pcloud
 ln -sf /.system/opt/pcloud /usr/bin/pcloud
 
 # gdm settings
-apt-get install -y git meson gobject-introspection libadwaita-1-dev libglib2.0-dev python-gi-dev gettext
-git clone --depth=1 https://github.com/gdm-settings/gdm-settings
-cd gdm-settings
-meson setup build
-meson install -C build
+apt-get install -y git systemd-container dbus-x11 zip unzip
+git clone https://github.com/PRATAP-KUMAR/gdm-extension/
+cd gdm-extension
+sudo make install
 cd ..
-rm -r gdm-settings
-apt-get remove -y git meson gobject-introspection
+rm -r gdm-extension
+apt-get remove -y git
