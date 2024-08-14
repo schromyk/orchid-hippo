@@ -12,3 +12,6 @@ mv pcloud /opt
 chmod +x /opt/pcloud
 
 ln -sf /.system/opt/pcloud /usr/bin/pcloud
+
+# gdm theme
+mv gnome-shell-theme.gresource.default /usr/share/gnome-shell
