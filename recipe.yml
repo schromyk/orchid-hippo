@@ -57,9 +57,7 @@ stages:
     source:
       packages:
         - afuse
-        - fuse-overlayfs
-        - fuse3
-        - libfuse3-3
+        - libfuse2t64
 
   # Put your custom actions behind this comment
 
