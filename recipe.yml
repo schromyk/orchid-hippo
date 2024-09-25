@@ -60,13 +60,7 @@ stages:
         - libfuse2t64
 
   # Put your custom actions behind this comment
-
-  - name: surfshark
-    type: apt
-    source:
-      packages:
-        - surfshark
-
+  
   - name: firefox-devedition
     type: apt
     source:
